@@ -1,4 +1,4 @@
-class ContainsX(object):
+class Solution(object):
     def findWordsContaining(self, words, x):
         """
         :type words: List[str]
@@ -7,11 +7,8 @@ class ContainsX(object):
         """
 
         indices = []
-        words_len = len(words)
-        
-        for i in range(words_len):
-            if x in words[i]:
+        for i, word in enumerate(words):
+            if x in word:
                 indices.append(i)
 
         return indices
-              
